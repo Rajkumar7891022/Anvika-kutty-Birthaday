@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎂 Anvika Kutty Birthday Invitation 🎉</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #ffccdd 0%, #ffe6f2 100%);
+  color: #fff;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Confetti */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: pink;
+  opacity: 0.7;
+  top: 0;
+  border-radius: 50%;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  0% {transform: translateY(0) rotate(0deg); opacity:1;}
+  100% {transform: translateY(100vh) rotate(360deg); opacity:0;}
+}
+
+/* Glowing Header */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  margin-top: 50px;
+  text-shadow: 2px 2px 15px #ff99cc;
+  animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+  from {text-shadow:0 0 10px #ff66b2,0 0 20px #ff3399;}
+  to {text-shadow:0 0 40px #ff99cc,0 0 80px #ff33aa;}
+}
+
+.name {
+  font-size: 2.8rem;
+  margin-top: 10px;
+  font-weight: 600;
+  text-shadow: 0 0 20px #ff66ff, 0 0 40px #ff33cc;
+}
+
+/* Invitation Box */
+.invitation-box {
+  margin: 40px auto;
+  padding: 30px 40px;
+  background: rgba(255, 182, 193, 0.6);
+  border-radius: 25px;
+  backdrop-filter: blur(8px);
+  max-width: 90%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  text-align: center;
+  border: 2px solid #ff99cc;
+  animation: boxGlow 3s infinite alternate;
+}
+@keyframes boxGlow {
+  from {box-shadow:0 0 15px #ff99cc;}
+  to {box-shadow:0 0 35px #ff66ff;}
+}
+.invitation-box p {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+.highlight {
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 10px #ff99ff;
+}
+
+/* Photo Frame */
+.photo-frame {
+  width: 180px;
+  height: 180px;
+  margin: 20px auto;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 20px #ff99cc;
+}
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Poll Box */
+.poll-box {
+  margin: 40px auto;
+  padding: 25px;
+  max-width: 90%;
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  border: 2px solid #ff99cc;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 15px rgba(255,105,180,0.4);
+}
+.poll-box h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 0 0 10px #ff66ff;
+}
+.poll-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+.poll-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+}
+.poll-btn.yes {background: #ff66b2;}
+.poll-btn.no {background: #ff3366;}
+.poll-btn.maybe {background: #ff9966;}
+.poll-btn:hover {transform: scale(1.1);}
+.poll-result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 0 0 5px #ff99ff;
+}
+
+/* Balloons */
+.balloon {
+  position: absolute;
+  bottom: -150px;
+  width: 40px;
+  height: 50px;
+  border-radius: 50%;
+  animation: float 7s ease-in infinite;
+}
+@keyframes float {
+  0% {transform: translateY(0); opacity:1;}
+  100% {transform: translateY(-800px); opacity:0;}
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 0 0 8px #000;
+}
+</style>
+</head>
+<body>
+
+<h1>🎉 You're Invited! 🎉</h1>
+<div class="name">💖 Anvika Kutty 💖</div>
+
+<!-- Photo -->
+<div class="photo-frame">
+  <img src="potti.jpg.jpg" alt="Anvika Photo">
+</div>
+
+<div class="invitation-box">
+  <p>Join us for the magical <span class="highlight">Birthday Celebration</span> of our little princess!</p>
+  <p>🎂 <b>Date:</b> 24th October 2024</p>
+  <p>📍 <b>Venue:</b> Nagarajpally, Siddipet</p>
+  <p>👨‍👩‍👧 <b>Hosted by:</b> Balu & Family</p>
+  <p>✨ Let’s celebrate with love, laughter & fun! ✨</p>
+</div>
+
+<!-- Poll Section -->
+<div class="poll-box">
+  <h2>Who will come? 🎈</h2>
+  <div class="poll-options">
+    <button class="poll-btn yes" onclick="vote('yes')">Yes 🎉</button>
+    <button class="poll-btn maybe" onclick="vote('maybe')">Maybe 😊</button>
+    <button class="poll-btn no" onclick="vote('no')">No 😢</button>
+  </div>
+  <div class="poll-result" id="pollResult">No votes yet.</div>
+</div>
+
+<footer>💫 With Love – Balu & Family 💫</footer>
+
+<!-- Audio -->
+<audio id="music" src="happy-birthday-357371.mp3" loop></audio>
+
+<script>
+// Music Autoplay with fallback
+const music = document.getElementById("music");
+window.addEventListener('load', () => {
+  const playPromise = music.play();
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      console.log("Music autoplayed!");
+    }).catch(error => {
+      console.log("Autoplay blocked. Tap anywhere to play music.");
+      document.body.addEventListener('click', () => music.play(), { once: true });
+    });
+  }
+});
+
+// Balloons
+function createBalloon() {
+  const balloon = document.createElement("div");
+  balloon.classList.add("balloon");
+  document.body.appendChild(balloon);
+  balloon.style.left = Math.random() * window.innerWidth + "px";
+  balloon.style.background = hsl(${Math.random() * 360}, 80%, 60%);
+  balloon.style.animationDuration = (5 + Math.random() * 5) + "s";
+  setTimeout(() => balloon.remove(), 8000);
+}
+
+// Confetti
+function createConfetti() {
+  const confetti = document.createElement("div");
+  confetti.classList.add("confetti");
+  confetti.style.left = Math.random() * window.innerWidth + "px";
+  confetti.style.backgroundColor = hsl(${Math.random() * 360}, 80%, 70%);
+  confetti.style.width = ${5 + Math.random() * 10}px;
+  confetti.style.height = ${5 + Math.random() * 10}px;
+  document.body.appendChild(confetti);
+  setTimeout(() => confetti.remove(), 8000);
+}
+
+// Poll System (localStorage)
+let votes = {yes: 0, no: 0, maybe: 0};
+if(localStorage.getItem("pollVotes")) {
+  votes = JSON.parse(localStorage.getItem("pollVotes"));
+  updatePoll();
+}
+
+function vote(option) {
+  votes[option]++;
+  localStorage.setItem("pollVotes", JSON.stringify(votes));
+  updatePoll();
+}
+
+function updatePoll() {
+  const total = votes.yes + votes.no + votes.maybe;
+  if(total === 0) {
+    document.getElementById("pollResult").textContent = "No votes yet.";
+    return;
+  }
+  const yesPercent = ((votes.yes / total) * 100).toFixed(0);
+  const maybePercent = ((votes.maybe / total) * 100).toFixed(0);
+  const noPercent = ((votes.no / total) * 100).toFixed(0);
+  document.getElementById("pollResult").innerHTML = `
+    🎉 Yes: ${yesPercent}% | 😊 Maybe: ${maybePercent}% | 😢 No: ${noPercent}%
+  `;
+}
+
+// Start animations
+window.onload = function() {
+  setInterval(createBalloon, 300);
+  setInterval(createConfetti, 150);
+};
+</script>
+</body>
+</html>
